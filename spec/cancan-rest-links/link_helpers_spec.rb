@@ -6,7 +6,7 @@ require 'cancan-rest-links/rails/configure'
 class Post
 end
 
-describe AuthAssistant::Link::Rest do  
+describe CanCan::Link::Rest do  
   describe '#index_link' do
     it "should create an index link" do
       with_engine do |e, view|

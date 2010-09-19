@@ -1,5 +1,7 @@
 module CanCan::Link
   module Rest      
+    include Rails3::Assist::BaseHelper
+    
     def index_link(object, label = nil)
       label ||= auth_labels[:index]
       obj = index_obj(object)
@@ -21,9 +23,8 @@ module CanCan::Link
                 
     def create_link(object, label = nil)
       label ||= auth_labels[:new]    
-      link_to(content, ) if can?(:create, object)      
-      # path = send :"new_#{object.class.to_s.downcase}_path"    
-      link = link_to(label, [:new, object.name.underscore.to_sym]) if can?(:create, object)
+      path = send :"new_#{object.class.to_s.downcase}_path"    
+      link = link_to(label, path) if can?(:create, object)
     end
 
     def edit_link(object, label = nil)

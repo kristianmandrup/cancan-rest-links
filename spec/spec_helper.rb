@@ -1,5 +1,5 @@
-require 'rspec'
-require 'rspec/autorun'
+require 'rspec/core'
+require 'rspec-action_view'
 require 'cancan-rest-links'
 
 RSpec.configure do |config|
