@@ -1,7 +1,5 @@
 module CanCan::Link
-  module Rest      
-    include Rails3::Assist::BaseHelper
-    
+  module Rest          
     def index_link(object, label = nil)
       label ||= auth_labels[:index]
       obj = index_obj(object)
