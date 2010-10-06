@@ -9,7 +9,7 @@ end
 describe CanCan::Link::Rest do  
   describe '#index_link' do
     it "should create an index link" do
-      with_engine do |e, view|
+      view_engine do |e, view|
         label = 'index'
         path = 'post/index'        
         post = Post.new
@@ -30,7 +30,7 @@ describe CanCan::Link::Rest do
   
   describe '#create_link' do
     it "should create a create link" do
-      with_engine do |e, view|
+      view_engine do |e, view|
         label = 'create'
         path = 'post/create'        
         post = Post.new
@@ -51,7 +51,7 @@ describe CanCan::Link::Rest do
   
   describe '#edit_link' do
     it "should create a create link" do
-      with_engine do |e, view|
+      view_engine do |e, view|
         label = 'create'
         path = 'post/create'        
         post = Post.new
@@ -71,7 +71,7 @@ describe CanCan::Link::Rest do
   
   describe '#delete_link' do
     it "should create a delete link" do
-      with_engine do |e, view|
+      view_engine do |e, view|
         label = 'delete'
         path = 'post/delete'        
         post = Post.new
@@ -92,7 +92,7 @@ describe CanCan::Link::Rest do
   
   describe '#show_link' do
     it "should create a show link" do
-      with_engine do |e, view|
+      view_engine do |e, view|
         label = 'show'
         path = 'post/show'        
         post = Post.new
