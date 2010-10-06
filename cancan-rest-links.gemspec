@@ -9,19 +9,19 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = %q{2010-09-26}
+  s.date = %q{2010-10-07}
   s.description = %q{Guard your links with permissions}
   s.email = %q{kmandrup@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
-     "README.rdoc"
+     "README.markdown"
   ]
   s.files = [
     ".document",
      ".gitignore",
      ".rspec",
      "LICENSE",
-     "README.rdoc",
+     "README.markdown",
      "Rakefile",
      "VERSION",
      "cancan-rest-links.gemspec",
@@ -41,6 +41,7 @@ Gem::Specification.new do |s|
   s.summary = %q{Rest link helpers for CanCan}
   s.test_files = [
     "spec/cancan-rest-links/link_helpers_spec.rb",
+     "spec/cancan-rest-links/link_with_cream_spec.rb",
      "spec/cancan-rest-links/rails/configure_spec.rb",
      "spec/spec_helper.rb"
   ]
@@ -50,14 +51,14 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, ["~> 2.0.0.beta.22"])
+      s.add_development_dependency(%q<rspec>, [">= 2.0.0.rc"])
       s.add_development_dependency(%q<rspec-action_view>, ["~> 0.3.1"])
       s.add_runtime_dependency(%q<cancan>, ["~> 1.3.4"])
       s.add_runtime_dependency(%q<require_all>, ["~> 1.2.0"])
       s.add_runtime_dependency(%q<sugar-high>, ["~> 0.2.10"])
       s.add_runtime_dependency(%q<r3_plugin_toolbox>, ["~> 0.3.6"])
     else
-      s.add_dependency(%q<rspec>, ["~> 2.0.0.beta.22"])
+      s.add_dependency(%q<rspec>, [">= 2.0.0.rc"])
       s.add_dependency(%q<rspec-action_view>, ["~> 0.3.1"])
       s.add_dependency(%q<cancan>, ["~> 1.3.4"])
       s.add_dependency(%q<require_all>, ["~> 1.2.0"])
@@ -65,7 +66,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<r3_plugin_toolbox>, ["~> 0.3.6"])
     end
   else
-    s.add_dependency(%q<rspec>, ["~> 2.0.0.beta.22"])
+    s.add_dependency(%q<rspec>, [">= 2.0.0.rc"])
     s.add_dependency(%q<rspec-action_view>, ["~> 0.3.1"])
     s.add_dependency(%q<cancan>, ["~> 1.3.4"])
     s.add_dependency(%q<require_all>, ["~> 1.2.0"])
