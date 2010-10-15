@@ -10,7 +10,7 @@ begin
     gem.add_development_dependency "rspec",             ">= 2.0.0.rc"
     gem.add_development_dependency "rspec-action_view", "~> 0.3.1"
 
-    gem.add_dependency 'cancan',            "~> 1.3.4"
+    gem.add_dependency 'cancan',            "~> 1.4.0"
     gem.add_dependency 'require_all',       "~> 1.2.0"
     gem.add_dependency 'sugar-high',        "~> 0.2.10" 
     gem.add_dependency 'r3_plugin_toolbox', "~> 0.3.6"  
