@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = %q{2010-10-15}
+  s.date = %q{2010-10-18}
   s.description = %q{Guard your links with permissions}
   s.email = %q{kmandrup@gmail.com}
   s.extra_rdoc_files = [
@@ -52,14 +52,14 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, [">= 2.0.0.rc"])
+      s.add_development_dependency(%q<rspec>, [">= 2.0.0"])
       s.add_development_dependency(%q<rspec-action_view>, ["~> 0.3.1"])
       s.add_runtime_dependency(%q<cancan>, ["~> 1.4.0"])
       s.add_runtime_dependency(%q<require_all>, ["~> 1.2.0"])
       s.add_runtime_dependency(%q<sugar-high>, ["~> 0.2.10"])
       s.add_runtime_dependency(%q<r3_plugin_toolbox>, ["~> 0.3.6"])
     else
-      s.add_dependency(%q<rspec>, [">= 2.0.0.rc"])
+      s.add_dependency(%q<rspec>, [">= 2.0.0"])
       s.add_dependency(%q<rspec-action_view>, ["~> 0.3.1"])
       s.add_dependency(%q<cancan>, ["~> 1.4.0"])
       s.add_dependency(%q<require_all>, ["~> 1.2.0"])
@@ -67,7 +67,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<r3_plugin_toolbox>, ["~> 0.3.6"])
     end
   else
-    s.add_dependency(%q<rspec>, [">= 2.0.0.rc"])
+    s.add_dependency(%q<rspec>, [">= 2.0.0"])
     s.add_dependency(%q<rspec-action_view>, ["~> 0.3.1"])
     s.add_dependency(%q<cancan>, ["~> 1.4.0"])
     s.add_dependency(%q<require_all>, ["~> 1.2.0"])
