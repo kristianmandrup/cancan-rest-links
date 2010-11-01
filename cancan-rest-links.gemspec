@@ -56,14 +56,12 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rspec-action_view>, ["~> 0.3.1"])
       s.add_runtime_dependency(%q<cancan>, ["~> 1.4.0"])
       s.add_runtime_dependency(%q<require_all>, ["~> 1.2.0"])
-      s.add_runtime_dependency(%q<sugar-high>, ["~> 0.2.10"])
       s.add_runtime_dependency(%q<r3_plugin_toolbox>, ["~> 0.3.6"])
     else
       s.add_dependency(%q<rspec>, [">= 2.0.0"])
       s.add_dependency(%q<rspec-action_view>, ["~> 0.3.1"])
       s.add_dependency(%q<cancan>, ["~> 1.4.0"])
       s.add_dependency(%q<require_all>, ["~> 1.2.0"])
-      s.add_dependency(%q<sugar-high>, ["~> 0.2.10"])
       s.add_dependency(%q<r3_plugin_toolbox>, ["~> 0.3.6"])
     end
   else
@@ -71,7 +69,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rspec-action_view>, ["~> 0.3.1"])
     s.add_dependency(%q<cancan>, ["~> 1.4.0"])
     s.add_dependency(%q<require_all>, ["~> 1.2.0"])
-    s.add_dependency(%q<sugar-high>, ["~> 0.2.10"])
     s.add_dependency(%q<r3_plugin_toolbox>, ["~> 0.3.6"])
   end
 end
