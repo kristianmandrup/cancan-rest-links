@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
     ".document",
      ".gitignore",
      ".rspec",
+     "Gemfile",
      "LICENSE",
      "README.markdown",
      "Rakefile",
