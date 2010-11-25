@@ -11,6 +11,16 @@ Note: The link helpers require a hash called #auth_labels, which is used to look
 
 An example of this functionality can be found in the [Cream](http://github.com/kristianmandrup/cream) framework where this gem is used.
 
+## Rails 3 usage
+
+See the configure_spec in the /specs folder.
+
+<code>
+  require 'cancan-rest-links/rails/configure'  
+</code>
+
+
+
 ## Note on Patches/Pull Requests
  
 * Fork the project.
