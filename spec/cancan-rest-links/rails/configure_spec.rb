@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'cancan-rest-links/rails/configure'
+# require 'cancan-rest-links/rails/configure'
 
 module Minimal
   class Application < Rails::Application

@@ -2,24 +2,25 @@
 
 REST link helpers for the [CanCan](http://github.com/ryanb/cancan) permission system.
 
-Note: The link helpers require a hash called #auth_labels, which is used to look-up a label to display for the link
+## Update:Nov 26, 2010
 
-<pre>
-  label = auth_labels[:new]
-  ...
-</pre>
+From changelog:
 
-An example of this functionality can be found in the [Cream](http://github.com/kristianmandrup/cream) framework where this gem is used.
+* Removed dependency to Cream for labels
+* Created class methods on CanCan::Links::Rest for handling labels, including translations
+* Created a Generator to create a locale file for labels
+* Created a spec to test the generator
+* Created specs to test the REST link generation with and without label translations
 
 ## Rails 3 usage
 
-See the configure_spec in the /specs folder.
+See the demo app at [CanCan permits demo app](https://github.com/kristianmandrup/cancan-permits-demo)
 
-<code>
-  require 'cancan-rest-links/rails/configure'  
-</code>
+Configure your Rails 3 app for use with CanCan and some Authentication solution like Authlogic or Devise.
 
+## Use with CanCan permits
 
+[CanCan permits](https://github.com/kristianmandrup/cancan-permits) is a gem that lets you use Permits with CanCan to configure permissions.
 
 ## Note on Patches/Pull Requests
  

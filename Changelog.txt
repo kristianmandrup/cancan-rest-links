@@ -1,0 +1,7 @@
+Nov 26, 2010
+---
+* Removed dependency to Cream for labels
+* Created class methods on CanCan::Links::Rest for handling labels, including translations
+* Created a Generator to create a locale file for labels
+* Created a spec to test the generator
+* Created specs to test the REST link generation with and without label translations

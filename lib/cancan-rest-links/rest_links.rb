@@ -1,5 +1,7 @@
+require 'cancan-rest-links/labels'
+
 module CanCan::Link
-  module Rest          
+  module Rest              
     def index_link(object, label = nil)
       label ||= index_label
       obj = index_obj(object)
@@ -52,33 +54,18 @@ module CanCan::Link
     
     protected
 
-    def index_label
-      get_label :index
+    # create method :new_label, :index_label and so on ...
+    CanCan::Links::Rest.rest_labels.each do |name|
+      class_eval %{
+        def #{name}_label      
+          get_label :#{name}
+        end
+      }
     end
 
-    def new_label
-      get_label :new
-    end
-
-    def edit_label
-      get_label :edit
-    end
-
-    def show_label 
-      get_label :show
-    end 
-
-    def delete_label 
-      get_label :delete
-    end 
-    
-    def confirm_label
-      get_label :confirm
-    end
-
+    # how to retrieve label in single location!
     def get_label key
-      raise 'the method #auth_labels must be available on the View' if !respond_to? :auth_labels
-      auth_labels[key]      
+      CanCan::Links::Rest.labels[key]
     end
 
     def index_obj(obj)

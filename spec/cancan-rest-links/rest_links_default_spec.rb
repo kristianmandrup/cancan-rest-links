@@ -14,16 +14,17 @@ describe CanCan::Link::Rest do
         path = 'post/index'        
         post = Post.new
 
-        view.stubs(:auth_labels).returns(:index => label)
-
         view.stubs(:posts_path).returns path
-        view.stubs(:can?).returns true
-        view.stubs(:link_to).with(label, path).returns 'it works'        
+        view.stubs(:can?).returns true                 
+
+        output_label = view.index_label
+
+        view.stubs(:link_to).with(label, path).returns output_label
 
         res = e.run_template_locals :post => post, :name => label do 
           %{<%= index_link(post, name) %> }
-        end 
-        res.should match /it works/
+        end
+        res.should match /#{output_label}/
       end                     
     end
   end
@@ -35,36 +36,38 @@ describe CanCan::Link::Rest do
         path = 'post/create'        
         post = Post.new
   
-        view.stubs(:auth_labels).returns(:index => label)
-  
         view.stubs(:new_post_path).returns path
         view.stubs(:can?).returns true
-        view.stubs(:link_to).with(label, path).returns 'it works'        
+
+        output_label = view.new_label
+
+        view.stubs(:link_to).with(label, path).returns output_label
   
         res = e.run_template_locals :post => post, :name => label do 
           %{<%= create_link(post, name) %> }
         end
-        res.should match /it works/
+        res.should match /#{output_label}/
       end                     
     end
   end
   
   describe '#edit_link' do
-    it "should create a create link" do
+    it "should create an edit link" do
       view_engine do |e, view|
         label = 'create'
         path = 'post/create'        
         post = Post.new
   
-        view.stubs(:auth_labels).returns(:index => label)
-  
         view.stubs(:can?).returns true
-        view.stubs(:link_to).with(label, [:edit, post]).returns 'it works'        
+        
+        output_label = view.edit_label        
+        
+        view.stubs(:link_to).with(label, [:edit, post]).returns output_label
   
         res = e.run_template_locals :post => post, :name => label do 
           %{<%= edit_link(post, name) %> }
         end
-        res.should match /it works/
+        res.should match /#{output_label}/
       end                     
     end
   end
@@ -75,16 +78,15 @@ describe CanCan::Link::Rest do
         label = 'delete'
         path = 'post/delete'        
         post = Post.new
-  
-        view.stubs(:auth_labels).returns(:index => label)
-  
-        view.stubs(:can?).returns true
-        view.stubs(:link_to).returns 'it works'        
+          
+        view.stubs(:can?).returns true 
+        output_label = view.delete_label
+        view.stubs(:link_to).returns output_label
   
         res = e.run_template_locals :post => post, :name => label do 
           %{<%= delete_link(post, name) %> }
         end
-        res.should match /it works/
+        res.should match /#{output_label}/
       end                     
     end
   end
@@ -97,14 +99,14 @@ describe CanCan::Link::Rest do
         path = 'post/show'        
         post = Post.new
   
-        view.stubs(:auth_labels).returns(:index => label)
         view.stubs(:can?).returns true
-        view.stubs(:link_to).with(label, post).returns 'it works'        
+        output_label = view.show_label
+        view.stubs(:link_to).with(label, post).returns output_label
 
         res = e.run_template_locals :post => post, :name => label do 
           %{<%= show_link(post, name) %> }
         end
-        res.should match /it works/
+        res.should match /#{output_label}/
       end                     
     end
   end
