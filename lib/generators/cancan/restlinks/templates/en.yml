@@ -1,9 +1,0 @@
-en:
-  cream:
-    confirm: 'Are you sure?'
-    actions:  
-      index: "Index"
-      new: "New"
-      edit: "Edit"
-      delete: "Delete"
-      show: "Show"

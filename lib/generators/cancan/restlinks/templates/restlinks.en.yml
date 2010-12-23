@@ -1,0 +1,10 @@
+en:
+  cream:
+    confirm: 'Are you sure?'
+    actions:
+      rest:  
+        index: "Index"
+        new: "New"
+        edit: "Edit"
+        delete: "Delete"
+        show: "Show"

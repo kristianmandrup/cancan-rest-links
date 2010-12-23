@@ -25,7 +25,7 @@ module CanCan::Links
       end    
 
       def translate_labels
-        ns_actions = 'cream.actions'
+        ns_actions = 'cream.actions.rest'
         tlabels =rest_labels.inject({}) {|result, action| 
           result[action.to_sym] = t("#{ns_actions}.#{action}").humanize
           result

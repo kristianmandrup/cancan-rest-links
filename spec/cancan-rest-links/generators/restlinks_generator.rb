@@ -13,9 +13,9 @@ end
 
 
 describe 'Restlinks generator' do   
-  use_helpers :controller, :special, :file
+  use_helpers :special, :file
     
-  setup_generator :licenses do
+  setup_generator :cancan_rest_links do
     tests Cancan::Generators::RestlinksGenerator
   end
 

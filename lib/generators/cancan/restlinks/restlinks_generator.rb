@@ -7,7 +7,7 @@ require 'logging_assist'
 module Cancan
   module Generators
     class RestlinksGenerator < Rails::Generators::Base
-      desc "Configures Rails app for use with RestLinks"
+      desc "Configures Rails app for use with CanCan REST links"
 
       source_root File.dirname(__FILE__) + '/templates'
 
@@ -21,7 +21,7 @@ module Cancan
       # extend Rails3::Assist::UseMacro
   
       def copy_locale  
-        template "en.yml", "config/locales/cream.en.yml"
+        template "restlinks.en.yml", "config/locales/cream.en.yml"
       end
     end
   end
