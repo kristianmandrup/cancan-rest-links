@@ -1,0 +1,10 @@
+en:
+  cream:
+    confirm: 'Er du sikker?'
+    actions:
+      rest:  
+        index:  "Indeks"
+        new:    "Ny"
+        edit:   "Rediger"
+        delete: "Slet"
+        show:   "Vis"

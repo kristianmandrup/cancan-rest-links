@@ -11,17 +11,30 @@ module Cancan
 
       source_root File.dirname(__FILE__) + '/templates'
 
+      class_option :locales, :type => :array, :default => ['all'], :desc => 'locales to generate for'
+
       def main_flow      
-        copy_locale
+        copy_locales
       end
   
       protected
 
       include Rails3::Assist::BasicLogger
       # extend Rails3::Assist::UseMacro
+
+      def supported_locales
+        [:en, :da]
+      end
+
+      def locales
+        return supported_locales if options[:locales].include? 'all'
+        options[:locales].map(&:to_sym) & supported_locales
+      end
   
-      def copy_locale  
-        template "restlinks.en.yml", "config/locales/cream.en.yml"
+      def copy_locales
+        locales.each do |locale|          
+          template "restlinks.#{locale}.yml", "config/locales/cream.#{locale}.yml"
+        end
       end
     end
   end
