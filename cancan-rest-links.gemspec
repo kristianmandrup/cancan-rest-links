@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "README.markdown",
     "Rakefile",
     "VERSION",
+    "cancan-rest-links.gemspec",
     "lib/cancan-rest-links.rb",
     "lib/cancan-rest-links/labels.rb",
     "lib/cancan-rest-links/namespaces.rb",
